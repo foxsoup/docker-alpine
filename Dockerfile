@@ -1,4 +1,4 @@
-FROM php:7.2.19-fpm-alpine
+FROM php:7.4.6-fpm-alpine
 
 COPY files/phpfpm-www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY files/nginx-gzip.conf /etc/nginx/conf.d/gzip.conf
@@ -19,6 +19,8 @@ RUN apk --update upgrade && \
   openssl \
   s6 \
   sudo \
+  libzip-dev \
+  zip \
 && rm -rf /var/cache/apk/* > /dev/null \
 && rm -f /etc/nginx/conf.d/default.conf
 
