@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv /bin/sh
+: "${APP_ENV:?Need to set APP_ENV}"
+
+# Use production config for everything except dev environment
+if [ $APP_ENV == "dev" ]
+then
+    exec /usr/sbin/nginx -c "/etc/nginx/nginx-dev.conf"
+else
+    exec /usr/sbin/nginx -c "/etc/nginx/nginx-prod.conf"
+fi

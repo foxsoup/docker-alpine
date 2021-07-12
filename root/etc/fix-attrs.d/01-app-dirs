@@ -1,0 +1,5 @@
+/var/www/app/var false nginx:nginx 0644 0755
+/var/www/app/var/cache true nginx:nginx 0644 0755
+/var/www/app/var/log true nginx:nginx 0644 0755
+/var/www/app/var/sessions true nginx:nginx 0644 0755
+/etc/sudo.conf false root:root 0644 0755
