@@ -1,4 +1,4 @@
-FROM php:7.4.6-fpm-alpine
+FROM php:7.4.21-fpm-alpine
 
 COPY files/phpfpm-www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY files/nginx-gzip.conf /etc/nginx/conf.d/gzip.conf
